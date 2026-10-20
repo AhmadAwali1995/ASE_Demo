@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f3efe4;
+  --paper-2: #fffaf2;
+  --ink: #1c1914;
+  --muted: #6d6458;
+  --line: #e2d8c8;
+  --forest: #0e6b45;
+  --forest-soft: #e5f4eb;
+  --clay: #9d3b32;
+  --clay-soft: #f8e8e4;
+  --gold: #8d6a2f;
+  --gold-soft: #f4ead4;
+}
+
+@theme inline {
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-forest: var(--forest);
+  --color-forest-soft: var(--forest-soft);
+  --color-clay: var(--clay);
+  --color-clay-soft: var(--clay-soft);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --font-sans: var(--font-sans-active);
+  --font-serif: var(--font-serif-active);
+}
+
+:root {
+  --font-sans-active: var(--font-outfit), sans-serif;
+  --font-serif-active: var(--font-newsreader), serif;
+}
+
+html[lang="ar"] {
+  --font-sans-active: var(--font-arabic), var(--font-outfit), sans-serif;
+  --font-serif-active: var(--font-arabic-serif), var(--font-newsreader), serif;
+}
+
+body {
+  background:
+    radial-gradient(1200px 500px at 10% -10%, #fff 0%, transparent 55%),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans-active), sans-serif;
+}
+
+html[lang="ar"] .font-serif {
+  line-height: 1.45;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+html[lang="ar"] .eyebrow {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.numeric {
+  direction: ltr;
+  unicode-bidi: isolate;
+}
+
+::selection {
+  background: #ead9b0;
+}
+
+.up {
+  color: var(--forest);
+}
+
+.down {
+  color: var(--clay);
+}
+
+.flat {
+  color: var(--muted);
+}
