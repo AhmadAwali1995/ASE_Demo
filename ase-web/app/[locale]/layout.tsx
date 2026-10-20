@@ -30,7 +30,6 @@ export function generateStaticParams() {
   return [{ locale: "en" }, { locale: "ar" }];
 }
 
-export const dynamicParams = false;
 
 export async function generateMetadata({
   params,
