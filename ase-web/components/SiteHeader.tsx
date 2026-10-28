@@ -10,10 +10,14 @@ export function SiteHeader({ locale }: { locale: Locale }) {
   const home = `/${locale}`;
   const compare = `/${locale}/compare`;
   const ai = `/${locale}/ai`;
+  const analysts = `/${locale}/analysts`;
+  const posts = `/${locale}/posts`;
   const links = [
     { href: home, label: copy.watch },
     { href: compare, label: copy.compare },
     { href: ai, label: copy.ai },
+    { href: analysts, label: copy.analysts },
+    { href: posts, label: copy.postsNav },
   ];
 
   return (
@@ -24,15 +28,18 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           <span className="mt-1 block text-xs text-muted">{copy.exchange}</span>
         </Link>
         <div className="flex items-center gap-2">
-          <nav aria-label={copy.pages} className="flex rounded-full border border-line bg-paper-2 p-1">
+          <nav aria-label={copy.pages} className="flex max-w-full overflow-x-auto rounded-full border border-line bg-paper-2 p-1">
             {links.map((link) => {
-              const active = pathname === link.href;
+              const active =
+                link.href === home
+                  ? pathname === home || pathname === `${home}/`
+                  : pathname === link.href || pathname.startsWith(`${link.href}/`);
               return (
                 <Link
                   key={link.href}
                   href={link.href}
                   aria-current={active ? "page" : undefined}
-                  className={`rounded-full px-4 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
+                  className={`whitespace-nowrap rounded-full px-3 py-2 text-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold ${
                     active ? "bg-ink text-paper-2" : "text-ink hover:bg-gold-soft"
                   }`}
                 >
@@ -55,7 +62,7 @@ export function SiteHeader({ locale }: { locale: Locale }) {
                     active ? "bg-ink text-paper-2" : "text-ink hover:bg-gold-soft"
                   }`}
                 >
-                  {item === "en" ? "EN" : "عربي"}
+                  {item === "en" ? copy.english : copy.arabic}
                 </Link>
               );
             })}
