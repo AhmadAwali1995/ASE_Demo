@@ -12,4 +12,4 @@ What: Analyses are not auto-flagged success/failed; criteria still to be defined
 
 Kind: skip
 Where: ase-web
-What: Next 15.5.28 is past the 2-year support window; OpenNext builds pass --dangerouslyUseUnsupportedNextVersion instead of upgrading Next
+What: Next 15.5.28 is past the 2-year support window; postinstall sets OpenNext's allow-unsupported flag instead of upgrading Next

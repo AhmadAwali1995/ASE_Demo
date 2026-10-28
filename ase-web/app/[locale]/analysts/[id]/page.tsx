@@ -1,6 +1,6 @@
 import { AnalystProfile } from "@/components/community/AnalystProfile";
 import { getAnalyst, getAnalysts, getPostsByAnalyst, getReviews } from "@/lib/community";
-import { isLocale, text } from "@/lib/i18n";
+import { isLocale } from "@/lib/i18n";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
