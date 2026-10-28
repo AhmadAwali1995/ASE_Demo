@@ -35,5 +35,5 @@ Source: ase-web/lib/ase/statements.ts
 ## Cloudflare Workers
 
 Direction: hosting
-Used for: Public ASE Desk at https://ase-desk.ahmadawali1995.workers.dev
+Used for: Public ASE Desk at https://ase-demo.ahmadawali1995.workers.dev
 Source: ase-web/wrangler.jsonc

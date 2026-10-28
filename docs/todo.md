@@ -7,3 +7,9 @@ Open items from development: skipped work, known mistakes, and structure issues.
 Kind: skip
 Where: community posts
 What: Analyses are not auto-flagged success/failed; criteria still to be defined
+
+## Next 15 support window
+
+Kind: skip
+Where: ase-web
+What: Next 15.5.28 is past the 2-year support window; OpenNext builds pass --dangerouslyUseUnsupportedNextVersion instead of upgrading Next

@@ -8,9 +8,11 @@
     "snapshot": "npx tsx scripts/snapshot-market.ts",
     "start": "next start",
     "lint": "eslint",
-    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
-    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
-    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
+    "preview": "opennextjs-cloudflare build --dangerouslyUseUnsupportedNextVersion && opennextjs-cloudflare preview",
+    "deploy": "opennextjs-cloudflare build --dangerouslyUseUnsupportedNextVersion && opennextjs-cloudflare deploy",
+    "cf-build": "opennextjs-cloudflare build --dangerouslyUseUnsupportedNextVersion",
+    "cf-typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "postinstall": "node scripts/install-opennext-wrapper.cjs"
   },
   "dependencies": {
     "@opennextjs/cloudflare": "^1.20.12",
