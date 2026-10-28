@@ -2,22 +2,28 @@
 
 Source of truth for third-party APIs, webhooks, and outbound clients.
 
+## ASE market snapshot
+
+Direction: local file
+Used for: Watch, Compare, company pages, and suggested picks
+Source: ase-web/public/market-snapshot.json
+
 ## ASE daily bulletin
 
 Direction: outbound
-Used for: Session quotes, index, Arabic names
-Source: ase-web/lib/ase/market.ts
+Used for: Refresh snapshot session quotes, index, and Arabic names
+Source: ase-web/lib/ase/load-market.ts
 
 ## ASE closing prices
 
 Direction: outbound
-Used for: Multi-year closing-price timelines
-Source: ase-web/lib/ase/market.ts
+Used for: Refresh snapshot multi-year closing-price timelines
+Source: ase-web/lib/ase/load-market.ts
 
 ## ASE companies guides
 
 Direction: outbound
-Used for: Yearly guide figures on Watch and Compare
+Used for: Refresh snapshot yearly guide figures
 Source: ase-web/lib/ase/guides.ts
 
 ## ASE disclosures

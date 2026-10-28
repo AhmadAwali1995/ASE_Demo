@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "npx tsx scripts/snapshot-market.ts && next build",
+    "build": "next build",
+    "snapshot": "npx tsx scripts/snapshot-market.ts",
     "start": "next start",
     "lint": "eslint",
     "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",

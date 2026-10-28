@@ -21,7 +21,6 @@
 
 # production
 /build
-/public/market-snapshot.json
 
 # misc
 .DS_Store

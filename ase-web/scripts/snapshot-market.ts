@@ -1,5 +1,5 @@
 import { writeFileSync } from "node:fs";
-import { loadMarket } from "../lib/ase/market";
+import { loadMarket } from "../lib/ase/load-market";
 import type { Market, PricePoint, Stock } from "../lib/ase/types";
 
 function downsample(points: PricePoint[], max = 240): PricePoint[] {
